@@ -20,10 +20,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and package consumer app
+        working-directory: ./consumer
         run: |
-          cd consumer
           ./mvnw clean package -DskipTests
-          cd ..
 
       - name: Build Docker image for consumer app
         run: |
@@ -32,10 +31,9 @@ jobs:
           docker push ghcr.io/pravesh-77/consumer-app:latest
 
       - name: Build and package producer app
+        working-directory: ./producer
         run: |
-          cd producer
           ./mvnw clean package -DskipTests
-          cd ..
 
       - name: Build Docker image for producer app
         run: |
