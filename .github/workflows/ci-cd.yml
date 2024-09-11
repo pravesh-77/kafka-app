@@ -22,6 +22,7 @@ jobs:
       - name: Build and package consumer app
         working-directory: ./consumer
         run: |
+          ls -l # List files to ensure we are in the right directory
           ./mvnw clean package -DskipTests
 
       - name: Build Docker image for consumer app
@@ -33,10 +34,10 @@ jobs:
       - name: Build and package producer app
         working-directory: ./producer
         run: |
+          ls -l # List files to ensure we are in the right directory
           ./mvnw clean package -DskipTests
 
       - name: Build Docker image for producer app
         run: |
           docker build -t ghcr.io/pravesh-77/producer-app:latest ./producer
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker push ghcr.io/pravesh-77/producer-app:latest
+          echo ${{ secrets.GITHUB
