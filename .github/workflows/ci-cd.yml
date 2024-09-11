@@ -23,8 +23,22 @@ jobs:
         run: |
           cd consumer
           ./mvnw clean package -DskipTests
+          cd ..
 
       - name: Build Docker image for consumer app
         run: |
           docker build -t ghcr.io/pravesh-77/consumer-app:latest ./consumer
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.
+          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker push ghcr.io/pravesh-77/consumer-app:latest
+
+      - name: Build and package producer app
+        run: |
+          cd producer
+          ./mvnw clean package -DskipTests
+          cd ..
+
+      - name: Build Docker image for producer app
+        run: |
+          docker build -t ghcr.io/pravesh-77/producer-app:latest ./producer
+          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker push ghcr.io/pravesh-77/producer-app:latest
