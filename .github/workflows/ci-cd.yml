@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
+          distribution: 'temurin'
 
       - name: Build and package consumer app
         run: |
@@ -25,7 +26,7 @@ jobs:
 
       - name: Build Docker image for consumer app
         run: |
-          docker build -t ghcr.io/pravesh-77/consumer-app:latest .
+          docker build -t ghcr.io/pravesh-77/consumer-app:latest ./consumer
           echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           docker push ghcr.io/pravesh-77/consumer-app:latest
 
@@ -35,7 +36,3 @@ jobs:
           ./mvnw clean package -DskipTests
 
       - name: Build Docker image for producer app
-        run: |
-          docker build -t ghcr.io/pravesh-77/producer-app:latest .
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker push ghcr.io/pravesh-77/producer-app:latest
