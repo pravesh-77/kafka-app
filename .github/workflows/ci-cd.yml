@@ -31,7 +31,12 @@ jobs:
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
-          ./mvnw clean package -DskipTests
+          if [ -f "./mvnw" ]; then
+            ./mvnw clean package -DskipTests
+          else
+            echo "mvnw file not found in the consumer directory."
+            exit 1
+          fi
 
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
@@ -46,7 +51,12 @@ jobs:
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
-          ./mvnw clean package -DskipTests
+          if [ -f "./mvnw" ]; then
+            ./mvnw clean package -DskipTests
+          else
+            echo "mvnw file not found in the producer directory."
+            exit 1
+          fi
 
       # Build Docker image for producer app
       - name: Build Docker image for producer app
