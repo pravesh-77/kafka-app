@@ -1,0 +1,209 @@
+[33mcommit 3efb70042dcf21dbdb8b615d15f426b6f79a26c7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 8c110b7 dee467b
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 01:45:14 2024 +0530
+
+    Merge branch 'main' of https://github.com/pravesh-77/kafka-app
+    
+    This merge includes the latest changes from the remote repository.
+
+[33mcommit dee467be92e2aa299857430998f0d3825ea2d838[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 01:43:26 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 01981a2af1ad23bb9ef747539c5789956d3c22a3[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 01:41:44 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 705cd33bebca6915999508344edeae71dcb4cc91[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 01:40:48 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 8c110b719b194c211b4e260019bfd279e7291a5b[m
+Merge: f03764a 10ef690
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 01:30:53 2024 +0530
+
+    Merge remote-tracking branch 'origin/main'
+    
+    Merged the remote main branch to sync local changes with the latest updates from the remote repository. Resolved any conflicts if necessary.
+
+[33mcommit f03764a4cc73a023edb99f71222af4d30a4e94ca[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 01:29:15 2024 +0530
+
+    Add consumer and producer directories with necessary files
+
+[33mcommit a5801283e3605a537b3a3bb6ad45e8d7104e32b3[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 01:26:47 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 10ef690dd765476bfdbc7d333fef2662494788a7[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 01:26:47 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 00828a261b2e828a1bb7b44c4619abd6ef43c901[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 01:16:43 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit d1cf48e5f26328db9e7e674fa59ee0640cb29ff0[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 01:16:43 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 3f04a4b22a62a44e84d4f923d38db2a35f05ba31[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:50:39 2024 +0530
+
+    Re-add large files with Git LFS
+
+[33mcommit 956daa6e2f08714ccc3e78853b67a7dadc6e0530[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:49:26 2024 +0530
+
+    Remove large files
+
+[33mcommit 22610458e5eb50192990f1cd7661e723c290fd5c[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:47:40 2024 +0530
+
+    Re-add large files with Git LFS
+
+[33mcommit b547265ed880c4d129d2ec5f0535d32bb95ecbde[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:45:50 2024 +0530
+
+    Remove large files from history
+
+[33mcommit b90e01afa4175ff69e8b41f0401a69ad1e5c5472[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:44:00 2024 +0530
+
+    Re-add large files with Git LFS
+
+[33mcommit 9682b07057088dfcf857f9b25ece9aabeb5ea1a3[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:43:50 2024 +0530
+
+    Remove large files from history
+
+[33mcommit a129f53229a643db6c19f46149678cf88568dde8[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:40:45 2024 +0530
+
+    Add large files with Git LFS
+
+[33mcommit 73c7bbb143243f07d6df69d21d07ac5fa4e57fb6[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:40:22 2024 +0530
+
+    Track large files with Git LFS
+
+[33mcommit f353b181e4a087c5cc1d2bf1d3552f53d5670b06[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:32:15 2024 +0530
+
+    Add Maven Wrapper files
+
+[33mcommit cc30cc4461957b0fc95889a2f4c812759b1b6fb4[m
+Author: pravesh-77 <praveshparashar77@gmail.com>
+Date:   Sat Sep 14 00:24:21 2024 +0530
+
+    Initial commit with consumer and producer directories
+
+[33mcommit 1ea591325eca987a83d7460109df34a5b49d86aa[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 00:19:54 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 206eafa633fe915ea41044fe50435d045bf42af8[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 00:18:33 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit f16eddaacf9dbff73bf66fce8c9862f8f5fc34f6[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 00:17:18 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 5ac9c933badb5a0509061be2c04efde583624fc9[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 00:14:40 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 93de773d2e77536e3d155de7a0367408bdd34436[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Sat Sep 14 00:13:04 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit b6ac4826f67dde561cce6131631c3c88ca2e27a3[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Thu Sep 12 00:14:10 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit ebe4013f6b950e989a61c6f580565e9df0da2e88[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Thu Sep 12 00:12:37 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 218e4dade436f1c027244a031c1e2af91c2952dd[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Thu Sep 12 00:10:04 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 095f328c669dcb5ca3159c167476055a81f9dca3[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Thu Sep 12 00:07:15 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit 8d5a7466d26b17aa0bde283eeb94b9f7cce8a96a[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Thu Sep 12 00:02:50 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit a4d3dfa40381bec545249f44d55ef94c2ce7f728[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Thu Sep 12 00:01:43 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit b9508f553c7a4578129f1e2d11d408291e2b8ee2[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Thu Sep 12 00:00:47 2024 +0530
+
+    Update ci-cd.yml
+
+[33mcommit ff41897affa507dc8f3e52703e000f1067afe2ea[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Wed Sep 11 23:59:24 2024 +0530
+
+    Create ci-cd.yml
+
+[33mcommit 3d2ff6fe3f926b0c36c389e1499787733c9f57c6[m
+Author: Pravesh Parashar <156897162+pravesh-77@users.noreply.github.com>
+Date:   Wed Sep 11 00:51:49 2024 +0530
+
+    Initial commit
