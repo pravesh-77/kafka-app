@@ -31,11 +31,18 @@ jobs:
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
-          ./mvnw clean package -DskipTests
+          if [ -f "./mvnw" ]; then
+            ./mvnw clean package -DskipTests
+          else
+            echo "mvnw file not found in the consumer directory."
+            exit 1
+          fi
 
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
         run: |
+          pwd
+          ls -R # List directory structure to ensure consumer directory exists
           docker build -t ghcr.io/pravesh-77/consumer-app:latest consumer
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/consumer-app:latest
@@ -46,11 +53,18 @@ jobs:
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
-          ./mvnw clean package -DskipTests
+          if [ -f "./mvnw" ]; then
+            ./mvnw clean package -DskipTests
+          else
+            echo "mvnw file not found in the producer directory."
+            exit 1
+          fi
 
       # Build Docker image for producer app
       - name: Build Docker image for producer app
         run: |
+          pwd
+          ls -R # List directory structure to ensure producer directory exists
           docker build -t ghcr.io/pravesh-77/producer-app:latest producer
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/producer-app:latest
