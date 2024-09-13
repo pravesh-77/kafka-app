@@ -29,6 +29,7 @@ jobs:
       - name: Build and package consumer app
         working-directory: consumer
         run: |
+          pwd
           ls -l # List files to ensure we are in the right directory
           ./mvnw clean package -DskipTests
 
@@ -43,6 +44,7 @@ jobs:
       - name: Build and package producer app
         working-directory: producer
         run: |
+          pwd
           ls -l # List files to ensure we are in the right directory
           ./mvnw clean package -DskipTests
 
