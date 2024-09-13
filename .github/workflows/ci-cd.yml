@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # List the directory structure to debug paths
+      - name: List directory structure
+        run: |
+          pwd
+          ls -R # Recursively list all directories and files
+
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
