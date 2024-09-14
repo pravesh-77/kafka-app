@@ -27,19 +27,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Build and package consumer app
-      - name: Build and package consumer app
-        working-directory: ./assesment/consumer  # Update the path based on the actual repo structure
-        run: |
-          pwd
-          ls -l # List files to ensure we are in the right directory
-          if [ -f "./mvnw" ]; then
-            ./mvnw clean package -DskipTests
-          else
-            echo "mvnw file not found in the consumer directory."
-            exit 1
-          fi
-
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
         run: |
