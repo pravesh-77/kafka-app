@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout code
+      # Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Debug: List the directory structure to ensure correct paths
+      # Debug: List directory structure to verify paths
       - name: List directory structure
         run: |
           pwd
@@ -27,21 +27,32 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      # Build and package consumer app
+      - name: Build and package consumer app
+        working-directory: ./consumer  # Update the path to the correct directory
+        run: |
+          pwd
+          ls -l # List files to ensure we are in the correct directory
+          if [ -f "./mvnw" ]; then
+            ./mvnw clean package -DskipTests
+          else
+            echo "mvnw file not found in the consumer directory."
+            exit 1
+          fi
+
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
         run: |
-          pwd
-          ls -R # List directory structure to ensure consumer directory exists
-          docker build -t ghcr.io/pravesh-77/consumer-app:latest ./assesment/consumer
+          docker build -t ghcr.io/pravesh-77/consumer-app:latest ./consumer
           echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/consumer-app:latest
 
       # Build and package producer app
       - name: Build and package producer app
-        working-directory: ./assesment/producer  # Update the path based on the actual repo structure
+        working-directory: ./producer  # Update the path to the correct directory
         run: |
           pwd
-          ls -l # List files to ensure we are in the right directory
+          ls -l # List files to ensure we are in the correct directory
           if [ -f "./mvnw" ]; then
             ./mvnw clean package -DskipTests
           else
@@ -52,8 +63,6 @@ jobs:
       # Build Docker image for producer app
       - name: Build Docker image for producer app
         run: |
-          pwd
-          ls -R # List directory structure to ensure producer directory exists
-          docker build -t ghcr.io/pravesh-77/producer-app:latest ./assesment/producer
+          docker build -t ghcr.io/pravesh-77/producer-app:latest ./producer
           echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/producer-app:latest
