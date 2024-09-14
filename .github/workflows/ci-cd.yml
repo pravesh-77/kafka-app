@@ -20,6 +20,10 @@ jobs:
           pwd
           ls -R # Recursively list all directories and files
 
+      # Set execute permissions for mvnw
+      - name: Set execute permission for mvnw
+        run: chmod +x ./consumer/mvnw ./producer/mvnw
+
       # Set up JDK 17
       - name: Set up JDK
         uses: actions/setup-java@v3
@@ -29,16 +33,11 @@ jobs:
 
       # Build and package consumer app
       - name: Build and package consumer app
-        working-directory: ./consumer  # Update the path to the correct directory
+        working-directory: ./consumer  # Correct working directory
         run: |
           pwd
           ls -l # List files to ensure we are in the correct directory
-          if [ -f "./mvnw" ]; then
-            ./mvnw clean package -DskipTests
-          else
-            echo "mvnw file not found in the consumer directory."
-            exit 1
-          fi
+          ./mvnw clean package -DskipTests
 
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
@@ -49,16 +48,11 @@ jobs:
 
       # Build and package producer app
       - name: Build and package producer app
-        working-directory: ./producer  # Update the path to the correct directory
+        working-directory: ./producer  # Correct working directory
         run: |
           pwd
           ls -l # List files to ensure we are in the correct directory
-          if [ -f "./mvnw" ]; then
-            ./mvnw clean package -DskipTests
-          else
-            echo "mvnw file not found in the producer directory."
-            exit 1
-          fi
+          ./mvnw clean package -DskipTests
 
       # Build Docker image for producer app
       - name: Build Docker image for producer app
