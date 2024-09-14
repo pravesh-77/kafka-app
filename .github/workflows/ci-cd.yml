@@ -29,7 +29,7 @@ jobs:
 
       # Build and package consumer app
       - name: Build and package consumer app
-        working-directory: /mnt/c/Users/Admin/assesment/consumer
+        working-directory: ./assesment/consumer
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
@@ -45,13 +45,13 @@ jobs:
         run: |
           pwd
           ls -R # List directory structure to ensure consumer directory exists
-          docker build -t ghcr.io/pravesh-77/consumer-app:latest /mnt/c/Users/Admin/assesment/consumer
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          docker build -t ghcr.io/pravesh-77/consumer-app:latest ./assesment/consumer
+          echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/consumer-app:latest
 
       # Build and package producer app
       - name: Build and package producer app
-        working-directory: /mnt/c/Users/Admin/assesment/producer
+        working-directory: ./assesment/producer
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
@@ -67,6 +67,6 @@ jobs:
         run: |
           pwd
           ls -R # List directory structure to ensure producer directory exists
-          docker build -t ghcr.io/pravesh-77/producer-app:latest /mnt/c/Users/Admin/assesment/producer
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          docker build -t ghcr.io/pravesh-77/producer-app:latest ./assesment/producer
+          echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/producer-app:latest
