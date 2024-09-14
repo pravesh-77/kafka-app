@@ -1,0 +1,223 @@
+[2024-09-14 17:48:13Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO HostContext] Well known config file 'Credentials': '/mnt/c/Users/Admin/assesment/actions-runner/.credentials'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO HostContext] Well known config file 'Runner': '/mnt/c/Users/Admin/assesment/actions-runner/.runner'
+[2024-09-14 17:48:13Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2024-09-14 17:48:13Z INFO Listener] RuntimeInformation: Linux 5.15.153.1-microsoft-standard-WSL2 #1 SMP Fri Mar 29 23:14:13 UTC 2024.
+[2024-09-14 17:48:13Z INFO Listener] Version: 2.319.1
+[2024-09-14 17:48:13Z INFO Listener] Commit: bc6614c04d3ddc20e5ca5d5a87ae2b58dda322ec
+[2024-09-14 17:48:13Z INFO Listener] Culture: 
+[2024-09-14 17:48:13Z INFO Listener] UI Culture: 
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO Listener] Validating directory permissions for: '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO CommandLineParser] Parse
+[2024-09-14 17:48:13Z INFO CommandLineParser] Parsing 5 args
+[2024-09-14 17:48:13Z INFO CommandLineParser] parsing argument
+[2024-09-14 17:48:13Z INFO CommandLineParser] HasArgs: False
+[2024-09-14 17:48:13Z INFO CommandLineParser] Adding Command: configure
+[2024-09-14 17:48:13Z INFO CommandLineParser] parsing argument
+[2024-09-14 17:48:13Z INFO CommandLineParser] HasArgs: True
+[2024-09-14 17:48:13Z INFO CommandLineParser] arg: url
+[2024-09-14 17:48:13Z INFO CommandLineParser] parsing argument
+[2024-09-14 17:48:13Z INFO CommandLineParser] HasArgs: True
+[2024-09-14 17:48:13Z INFO CommandLineParser] Adding option 'url': 'https://github.com/pravesh-77/kafka-app'
+[2024-09-14 17:48:13Z INFO CommandLineParser] parsing argument
+[2024-09-14 17:48:13Z INFO CommandLineParser] HasArgs: True
+[2024-09-14 17:48:13Z INFO CommandLineParser] arg: token
+[2024-09-14 17:48:13Z INFO CommandLineParser] parsing argument
+[2024-09-14 17:48:13Z INFO CommandLineParser] HasArgs: True
+[2024-09-14 17:48:13Z INFO CommandLineParser] Adding option 'token': '***'
+[2024-09-14 17:48:13Z INFO Listener] Arguments parsed
+[2024-09-14 17:48:13Z INFO Runner] ExecuteCommand
+[2024-09-14 17:48:13Z INFO ConfigurationStore] currentAssemblyLocation: /mnt/c/Users/Admin/assesment/actions-runner/bin/Runner.Listener.dll
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO ConfigurationStore] binPath: /mnt/c/Users/Admin/assesment/actions-runner/bin
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO ConfigurationStore] RootFolder: /mnt/c/Users/Admin/assesment/actions-runner
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO HostContext] Well known config file 'Runner': '/mnt/c/Users/Admin/assesment/actions-runner/.runner'
+[2024-09-14 17:48:13Z INFO ConfigurationStore] ConfigFilePath: /mnt/c/Users/Admin/assesment/actions-runner/.runner
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO HostContext] Well known config file 'Credentials': '/mnt/c/Users/Admin/assesment/actions-runner/.credentials'
+[2024-09-14 17:48:13Z INFO ConfigurationStore] CredFilePath: /mnt/c/Users/Admin/assesment/actions-runner/.credentials
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO HostContext] Well known config file 'MigratedCredentials': '/mnt/c/Users/Admin/assesment/actions-runner/.credentials_migrated'
+[2024-09-14 17:48:13Z INFO ConfigurationStore] MigratedCredFilePath: /mnt/c/Users/Admin/assesment/actions-runner/.credentials_migrated
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:13Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:13Z INFO HostContext] Well known config file 'Service': '/mnt/c/Users/Admin/assesment/actions-runner/.service'
+[2024-09-14 17:48:13Z INFO ConfigurationStore] ServiceConfigFilePath: /mnt/c/Users/Admin/assesment/actions-runner/.service
+[2024-09-14 17:48:13Z INFO CommandSettings] Flag 'help': 'False'
+[2024-09-14 17:48:13Z INFO CommandSettings] Flag 'version': 'False'
+[2024-09-14 17:48:13Z INFO CommandSettings] Flag 'commit': 'False'
+[2024-09-14 17:48:13Z INFO CommandSettings] Flag 'check': 'False'
+[2024-09-14 17:48:13Z INFO CommandSettings] Command 'configure': 'True'
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: 
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: |        ____ _ _   _   _       _          _        _   _                      |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: |      | |  _| | __| |_| | | | | '_ \    / _ \ / __| __| |/ _ \| '_ \/ __|     |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: |      | |_| | | |_|  _  | |_| | |_) |  / ___ \ (__| |_| | (_) | | | \__ \     |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: |       \____|_|\__|_| |_|\__,_|_.__/  /_/   \_\___|\__|_|\___/|_| |_|___/     |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: |                                                                              |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE: |                       
+[2024-09-14 17:48:13Z INFO Terminal] WRITE: Self-hosted runner registration
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE:                         |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: |                                                                              |
+[2024-09-14 17:48:13Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2024-09-14 17:48:13Z INFO ConfigurationManager] ConfigureAsync
+[2024-09-14 17:48:13Z INFO CommandSettings] Flag 'generateServiceConfig': 'False'
+[2024-09-14 17:48:13Z INFO ConfigurationStore] IsConfigured()
+[2024-09-14 17:48:13Z INFO ConfigurationStore] IsConfigured: False
+[2024-09-14 17:48:13Z INFO ConfigurationManager] Is configured: False
+[2024-09-14 17:48:13Z INFO CommandSettings] Arg 'url': 'https://github.com/pravesh-77/kafka-app'
+[2024-09-14 17:48:13Z INFO CommandSettings] Remove url from Arg dictionary.
+[2024-09-14 17:48:13Z INFO CommandSettings] Arg 'token': '***'
+[2024-09-14 17:48:13Z INFO CommandSettings] Remove token from Arg dictionary.
+[2024-09-14 17:48:15Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration' (CB96:261EA2:14CF0:163FC:66E5CC5F)
+[2024-09-14 17:48:15Z INFO ConfigurationManager] Using V2 flow: False
+[2024-09-14 17:48:15Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2024-09-14 17:48:15Z INFO RunnerServer] EstablishVssConnection
+[2024-09-14 17:48:15Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2024-09-14 17:48:15Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-09-14 17:48:16Z INFO RunnerServer] EstablishVssConnection
+[2024-09-14 17:48:16Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-09-14 17:48:16Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-09-14 17:48:16Z INFO RunnerServer] EstablishVssConnection
+[2024-09-14 17:48:16Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-09-14 17:48:16Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-09-14 17:48:17Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-09-14 17:48:17Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-09-14 17:48:17Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-09-14 17:48:17Z INFO Terminal] WRITE LINE: 
+[2024-09-14 17:48:17Z INFO ConfigurationManager] Test Connection complete.
+[2024-09-14 17:48:17Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:17Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:17Z INFO HostContext] Well known config file 'RSACredentials': '/mnt/c/Users/Admin/assesment/actions-runner/.credentials_rsaparams'
+[2024-09-14 17:48:17Z INFO RSAFileKeyManager] Creating new RSA key using 2048-bit key length
+[2024-09-14 17:48:18Z INFO RSAFileKeyManager] Successfully saved RSA key parameters to file /mnt/c/Users/Admin/assesment/actions-runner/.credentials_rsaparams
+[2024-09-14 17:48:18Z INFO RSAFileKeyManager] Which2: 'chmod'
+[2024-09-14 17:48:18Z INFO RSAFileKeyManager] Location: '/usr/bin/chmod'
+[2024-09-14 17:48:18Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:18Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper] Starting process:
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/chmod'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Arguments: '600 /mnt/c/Users/Admin/assesment/actions-runner/.credentials_rsaparams'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Working directory: '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 54811.
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper] Process started with process id 54811, waiting for process exit.
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-09-14 17:48:18Z INFO ProcessInvokerWrapper] Finished process 54811 with exit code 0, and elapsed time 00:00:00.0498550.
+[2024-09-14 17:48:18Z INFO RSAFileKeyManager] Successfully set permissions for RSA key parameters file /mnt/c/Users/Admin/assesment/actions-runner/.credentials_rsaparams
+[2024-09-14 17:48:18Z INFO CommandSettings] Arg 'runnergroup': ''
+[2024-09-14 17:48:18Z INFO CommandSettings] Flag 'unattended': 'False'
+[2024-09-14 17:48:18Z INFO PromptManager] ReadValue
+[2024-09-14 17:48:18Z INFO Terminal] WRITE: Enter the name of the runner group to add this runner to: 
+[2024-09-14 17:48:18Z INFO Terminal] WRITE: [press Enter for Default] 
+[2024-09-14 17:48:18Z INFO Terminal] READ LINE
+[2024-09-14 17:48:24Z INFO Terminal] Read value: ''
+[2024-09-14 17:48:24Z INFO PromptManager] Falling back to the default: 'Default'
+[2024-09-14 17:48:24Z INFO Terminal] WRITE LINE: 
+[2024-09-14 17:48:24Z INFO ConfigurationManager] Found a self-hosted runner group with id 1 and name Default
+[2024-09-14 17:48:24Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2024-09-14 17:48:24Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2024-09-14 17:48:24Z INFO CommandSettings] Arg 'name': ''
+[2024-09-14 17:48:24Z INFO CommandSettings] Flag 'unattended': 'False'
+[2024-09-14 17:48:24Z INFO PromptManager] ReadValue
+[2024-09-14 17:48:24Z INFO Terminal] WRITE: Enter the name of runner: 
+[2024-09-14 17:48:24Z INFO Terminal] WRITE: [press Enter for DESKTOP-8P70CGR] 
+[2024-09-14 17:48:24Z INFO Terminal] READ LINE
+[2024-09-14 17:48:26Z INFO Terminal] Read value: ''
+[2024-09-14 17:48:26Z INFO PromptManager] Falling back to the default: 'DESKTOP-8P70CGR'
+[2024-09-14 17:48:26Z INFO Terminal] WRITE LINE: 
+[2024-09-14 17:48:26Z INFO CommandSettings] Arg 'labels': ''
+[2024-09-14 17:48:26Z INFO CommandSettings] Flag 'unattended': 'False'
+[2024-09-14 17:48:26Z INFO PromptManager] ReadValue
+[2024-09-14 17:48:26Z INFO Terminal] WRITE: This runner will have the following labels: 'self-hosted', 'Linux', 'X64' 
+Enter any additional labels (ex. label-1,label-2): 
+[2024-09-14 17:48:26Z INFO Terminal] WRITE: [press Enter to skip] 
+[2024-09-14 17:48:26Z INFO Terminal] READ LINE
+[2024-09-14 17:48:28Z INFO Terminal] Read value: ''
+[2024-09-14 17:48:28Z INFO Terminal] WRITE LINE: 
+[2024-09-14 17:48:28Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2024-09-14 17:48:28Z INFO CommandSettings] Flag 'no-default-labels': 'False'
+[2024-09-14 17:48:29Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2024-09-14 17:48:29Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2024-09-14 17:48:29Z INFO ConfigurationStore] Saving OAuth credential @ /mnt/c/Users/Admin/assesment/actions-runner/.credentials
+[2024-09-14 17:48:29Z INFO ConfigurationStore] Credentials Saved.
+[2024-09-14 17:48:29Z INFO ConfigurationStore] HasCredentials()
+[2024-09-14 17:48:29Z INFO ConfigurationStore] stored True
+[2024-09-14 17:48:29Z INFO CredentialManager] GetCredentialProvider
+[2024-09-14 17:48:29Z INFO CredentialManager] Creating type OAuth
+[2024-09-14 17:48:29Z INFO CredentialManager] Creating credential type: OAuth
+[2024-09-14 17:48:29Z INFO RSAFileKeyManager] Loading RSA key parameters from file /mnt/c/Users/Admin/assesment/actions-runner/.credentials_rsaparams
+[2024-09-14 17:48:29Z INFO RunnerServer] EstablishVssConnection
+[2024-09-14 17:48:29Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2024-09-14 17:48:29Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-09-14 17:48:29Z INFO RunnerServer] EstablishVssConnection
+[2024-09-14 17:48:29Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-09-14 17:48:29Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-09-14 17:48:29Z INFO RunnerServer] EstablishVssConnection
+[2024-09-14 17:48:29Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-09-14 17:48:29Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-09-14 17:48:30Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-09-14 17:48:30Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-09-14 17:48:30Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-09-14 17:48:30Z INFO RSAFileKeyManager] Loading RSA key parameters from file /mnt/c/Users/Admin/assesment/actions-runner/.credentials_rsaparams
+[2024-09-14 17:48:30Z INFO RSAFileKeyManager] Loading RSA key parameters from file /mnt/c/Users/Admin/assesment/actions-runner/.credentials_rsaparams
+[2024-09-14 17:48:33Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2024-09-14 17:48:33Z WARN GitHubActionsService] Retrieving an AAD auth token took a long time (2.5613471 seconds)
+[2024-09-14 17:48:33Z INFO CommandSettings] Arg 'work': ''
+[2024-09-14 17:48:33Z INFO CommandSettings] Flag 'unattended': 'False'
+[2024-09-14 17:48:33Z INFO PromptManager] ReadValue
+[2024-09-14 17:48:33Z INFO Terminal] WRITE: Enter name of work folder: 
+[2024-09-14 17:48:33Z INFO Terminal] WRITE: [press Enter for _work] 
+[2024-09-14 17:48:33Z INFO Terminal] READ LINE
+[2024-09-14 17:48:36Z INFO Terminal] Read value: ''
+[2024-09-14 17:48:36Z INFO PromptManager] Falling back to the default: '_work'
+[2024-09-14 17:48:36Z INFO ConfigurationStore] Saving runner settings.
+[2024-09-14 17:48:36Z INFO ConfigurationStore] Settings Saved.
+[2024-09-14 17:48:36Z INFO Terminal] WRITE LINE: 
+[2024-09-14 17:48:36Z INFO Terminal] WRITE LINE: 
+[2024-09-14 17:48:36Z INFO SystemDControlManager] Service name 'actions.runner.pravesh-77-kafka-app.DESKTOP-8P70CGR.service' display name 'GitHub Actions Runner (pravesh-77-kafka-app.DESKTOP-8P70CGR)' will be used for service configuration.
+[2024-09-14 17:48:36Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:36Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:36Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:36Z INFO HostContext] Well known directory 'Bin': '/mnt/c/Users/Admin/assesment/actions-runner/bin'
+[2024-09-14 17:48:36Z INFO HostContext] Well known directory 'Root': '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:36Z INFO UnixUtil] Which2: 'chmod'
+[2024-09-14 17:48:36Z INFO UnixUtil] Location: '/usr/bin/chmod'
+[2024-09-14 17:48:36Z INFO UnixUtil] Running /usr/bin/chmod 755 "/mnt/c/Users/Admin/assesment/actions-runner/svc.sh"
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper] Starting process:
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/chmod'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Arguments: '755 "/mnt/c/Users/Admin/assesment/actions-runner/svc.sh"'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Working directory: '/mnt/c/Users/Admin/assesment/actions-runner'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 55073.
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper] Process started with process id 55073, waiting for process exit.
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-09-14 17:48:36Z INFO ProcessInvokerWrapper] Finished process 55073 with exit code 0, and elapsed time 00:00:00.0058877.
+[2024-09-14 17:48:36Z INFO Listener] Runner execution has finished with return code 0

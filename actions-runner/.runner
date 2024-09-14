@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 21,
+  "agentName": "DESKTOP-8P70CGR",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus10.actions.githubusercontent.com/9qN61sxCn6tEe6ozruZjRyO64xGGTt13Kh5it8Knvh13IvAMzU/",
+  "gitHubUrl": "https://github.com/pravesh-77/kafka-app",
+  "workFolder": "_work"
+}
