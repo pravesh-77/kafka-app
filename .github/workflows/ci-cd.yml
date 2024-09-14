@@ -29,7 +29,7 @@ jobs:
 
       # Build and package consumer app
       - name: Build and package consumer app
-        working-directory: ./assesment/consumer
+        working-directory: ./assesment/consumer  # Update the path to match your repo structure
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
@@ -51,7 +51,7 @@ jobs:
 
       # Build and package producer app
       - name: Build and package producer app
-        working-directory: ./assesment/producer
+        working-directory: ./assesment/producer  # Update the path to match your repo structure
         run: |
           pwd
           ls -l # List files to ensure we are in the right directory
