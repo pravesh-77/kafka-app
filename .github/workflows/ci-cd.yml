@@ -10,30 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Debug: List directory structure to verify paths
       - name: List directory structure
         run: |
           pwd
-          ls -R # Recursively list all directories and files
+          ls -R
 
-      # Set execute permission for mvnw
       - name: Set execute permission for mvnw
         run: |
           chmod +x ./consumer/mvnw
           chmod +x ./producer/mvnw
 
-      # Set up JDK 17
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      # Install Maven
       - name: Install Maven
         run: |
           wget https://downloads.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip
@@ -43,66 +38,55 @@ jobs:
           echo "PATH=${M2_HOME}/bin:${PATH}" | sudo tee -a /etc/environment
           source /etc/environment
 
-      # Build and package consumer app
       - name: Build and package consumer app
         working-directory: ./consumer
         run: |
           mvn clean package -DskipTests
 
-      # Build Docker image for consumer app
       - name: Build Docker image for consumer app
         run: |
           docker build -t docker.io/pravesh77/consumer-app:latest ./consumer
           echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
           docker push docker.io/pravesh77/consumer-app:latest
 
-      # Build and package producer app
       - name: Build and package producer app
         working-directory: ./producer
         run: |
           mvn clean package -DskipTests
 
-      # Build Docker image for producer app
       - name: Build Docker image for producer app
         run: |
           docker build -t docker.io/pravesh77/producer-app:latest ./producer
           echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
           docker push docker.io/pravesh77/producer-app:latest
 
-      # Set up Helm
       - name: Set up Helm
         run: |
           curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-      # Create .kube directory and set up kubeconfig
       - name: Setup kubeconfig
         run: |
           mkdir -p $HOME/.kube
           echo "${{ secrets.KUBECONFIG }}" | base64 -d > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
-      # Debug kubeconfig
       - name: Debug kubeconfig
         run: |
           kubectl config view --raw
           kubectl get nodes || echo "No nodes available or kubeconfig is incorrect."
 
-      # Deploy consumer app to Kubernetes using Helm
       - name: Deploy consumer app to Kubernetes
         run: |
           helm upgrade --install consumer-app ./helm/consumer-chart --namespace my-namespace --create-namespace
 
-      # Deploy producer app to Kubernetes using Helm
       - name: Deploy producer app to Kubernetes
         run: |
           helm upgrade --install producer-app ./helm/producer-chart --namespace my-namespace --create-namespace
 
-      # Deploy Kafka to Kubernetes using Helm
       - name: Deploy Kafka to Kubernetes
         run: |
           helm upgrade --install kafka ./helm/kafka-chart --namespace my-namespace --create-namespace
 
-      # Deploy Zookeeper to Kubernetes using Helm
       - name: Deploy Zookeeper to Kubernetes
         run: |
           helm upgrade --install zookeeper ./helm/zookeeper-chart --namespace my-namespace --create-namespace
