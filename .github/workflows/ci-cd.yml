@@ -79,6 +79,7 @@ jobs:
         run: |
           mkdir -p $HOME/.kube
           echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config
 
       # Deploy to Kubernetes using Helm
       - name: Deploy consumer app to Kubernetes
