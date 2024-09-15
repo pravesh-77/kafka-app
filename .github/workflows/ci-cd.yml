@@ -74,12 +74,11 @@ jobs:
         run: |
           curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-      # Setup kubeconfig
+      # Create .kube directory and set up kubeconfig
       - name: Setup kubeconfig
         run: |
+          mkdir -p $HOME/.kube
           echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
-        env:
-          KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
       # Deploy to Kubernetes using Helm
       - name: Deploy consumer app to Kubernetes
