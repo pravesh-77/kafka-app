@@ -22,7 +22,9 @@ jobs:
 
       # Set execute permission for mvnw
       - name: Set execute permission for mvnw
-        run: chmod +x ./consumer/mvnw ./producer/mvnw
+        run: |
+          chmod +x ./consumer/mvnw
+          chmod +x ./producer/mvnw
 
       # Set up JDK 17
       - name: Set up JDK
@@ -33,7 +35,7 @@ jobs:
 
       # Build and package consumer app
       - name: Build and package consumer app
-        working-directory: ./consumer  # Correct working directory
+        working-directory: ./consumer
         run: |
          ./mvnw clean package -DskipTests
 
@@ -46,7 +48,7 @@ jobs:
 
       # Build and package producer app
       - name: Build and package producer app
-        working-directory: ./producer  # Correct working directory
+        working-directory: ./producer
         run: |
          ./mvnw clean package -DskipTests
 
@@ -56,4 +58,3 @@ jobs:
           docker build -t ghcr.io/pravesh-77/producer-app:latest ./producer
           echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/producer-app:latest
-
