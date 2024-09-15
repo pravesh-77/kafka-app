@@ -20,12 +20,6 @@ jobs:
           pwd
           ls -R # Recursively list all directories and files
 
-      # Set execute permission for mvnw
-      - name: Set execute permission for mvnw
-        run: |
-          chmod +x ./consumer/mvnw
-          chmod +x ./producer/mvnw
-
       # Set up JDK 17
       - name: Set up JDK
         uses: actions/setup-java@v3
@@ -33,11 +27,29 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      # Install Maven
+      - name: Install Maven
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Install Maven
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+        run: |
+          wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip
+          unzip apache-maven-3.8.6-bin.zip
+          sudo mv apache-maven-3.8.6 /opt/maven
+          export M2_HOME=/opt/maven
+          export PATH=${M2_HOME}/bin:${PATH}
+
       # Build and package consumer app
       - name: Build and package consumer app
         working-directory: ./consumer
         run: |
-          ./mvnw clean package -DskipTests
+          mvn clean package -DskipTests
 
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
@@ -50,7 +62,7 @@ jobs:
       - name: Build and package producer app
         working-directory: ./producer
         run: |
-          ./mvnw clean package -DskipTests
+          mvn clean package -DskipTests
 
       # Build Docker image for producer app
       - name: Build Docker image for producer app
