@@ -36,11 +36,12 @@ jobs:
       # Install Maven
       - name: Install Maven
         run: |
-          wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip
-          unzip apache-maven-3.8.6-bin.zip
-          sudo mv apache-maven-3.8.6 /opt/maven
-          export M2_HOME=/opt/maven
-          export PATH=${M2_HOME}/bin:${PATH}
+          wget https://downloads.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.zip
+          unzip apache-maven-3.9.0-bin.zip
+          sudo mv apache-maven-3.9.0 /opt/maven
+          echo "M2_HOME=/opt/maven" | sudo tee -a /etc/environment
+          echo "PATH=${M2_HOME}/bin:${PATH}" | sudo tee -a /etc/environment
+          source /etc/environment
 
       # Build and package consumer app
       - name: Build and package consumer app
