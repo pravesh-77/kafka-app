@@ -36,9 +36,9 @@ jobs:
       # Install Maven
       - name: Install Maven
         run: |
-          wget https://downloads.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.zip
-          unzip apache-maven-3.9.0-bin.zip
-          sudo mv apache-maven-3.9.0 /opt/maven
+          wget https://downloads.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip
+          unzip apache-maven-3.9.9-bin.zip
+          sudo mv apache-maven-3.9.9 /opt/maven
           echo "M2_HOME=/opt/maven" | sudo tee -a /etc/environment
           echo "PATH=${M2_HOME}/bin:${PATH}" | sudo tee -a /etc/environment
           source /etc/environment
