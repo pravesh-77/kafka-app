@@ -37,7 +37,7 @@ jobs:
       - name: Build and package consumer app
         working-directory: ./consumer
         run: |
-         ./mvnw clean package -DskipTests
+          ./mvnw clean package -DskipTests
 
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
@@ -50,7 +50,7 @@ jobs:
       - name: Build and package producer app
         working-directory: ./producer
         run: |
-         ./mvnw clean package -DskipTests
+          ./mvnw clean package -DskipTests
 
       # Build Docker image for producer app
       - name: Build Docker image for producer app
