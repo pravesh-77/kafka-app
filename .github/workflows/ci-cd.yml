@@ -81,6 +81,28 @@ jobs:
           echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
+      # Debug kubeconfig
+      - name: Debug kubeconfig
+        run: |
+          cat $HOME/.kube/config
+          kubectl config view
+
+      # Set Kubernetes context
+      - name: Set Kubernetes context
+        run: |
+          kubectl config use-context minikube
+
+      # Validate Helm installation
+      - name: Validate Helm Installation
+        run: |
+          helm version
+
+      # Test Kubernetes Connectivity
+      - name: Test Kubernetes Connectivity
+        run: |
+          kubectl cluster-info
+          kubectl get nodes
+
       # Deploy to Kubernetes using Helm
       - name: Deploy consumer app to Kubernetes
         run: |
