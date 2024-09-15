@@ -53,7 +53,7 @@ jobs:
       - name: Build Docker image for consumer app
         run: |
           docker build -t ghcr.io/pravesh-77/consumer-app:latest ./consumer
-          echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/consumer-app:latest
 
       # Build and package producer app
@@ -66,7 +66,7 @@ jobs:
       - name: Build Docker image for producer app
         run: |
           docker build -t ghcr.io/pravesh-77/producer-app:latest ./producer
-          echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/producer-app:latest
 
       # Set up Helm
@@ -84,22 +84,25 @@ jobs:
       # Debug kubeconfig
       - name: Debug kubeconfig
         run: |
-          kubectl config view
-          kubectl get nodes
+          kubectl config view --raw
+          kubectl get nodes || echo "No nodes available or kubeconfig is incorrect."
 
-      # Deploy to Kubernetes using Helm
+      # Deploy consumer app to Kubernetes using Helm
       - name: Deploy consumer app to Kubernetes
         run: |
           helm upgrade --install consumer-app ./helm/consumer-chart --namespace my-namespace --create-namespace
 
+      # Deploy producer app to Kubernetes using Helm
       - name: Deploy producer app to Kubernetes
         run: |
           helm upgrade --install producer-app ./helm/producer-chart --namespace my-namespace --create-namespace
 
+      # Deploy Kafka to Kubernetes using Helm
       - name: Deploy Kafka to Kubernetes
         run: |
           helm upgrade --install kafka ./helm/kafka-chart --namespace my-namespace --create-namespace
 
+      # Deploy Zookeeper to Kubernetes using Helm
       - name: Deploy Zookeeper to Kubernetes
         run: |
           helm upgrade --install zookeeper ./helm/zookeeper-chart --namespace my-namespace --create-namespace
