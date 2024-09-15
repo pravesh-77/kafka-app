@@ -35,9 +35,7 @@ jobs:
       - name: Build and package consumer app
         working-directory: ./consumer  # Correct working directory
         run: |
-          pwd
-          ls -l # List files to ensure we are in the correct directory
-          ./mvnw clean package -DskipTests
+         ./mvnw clean package -DskipTests
 
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
@@ -50,9 +48,7 @@ jobs:
       - name: Build and package producer app
         working-directory: ./producer  # Correct working directory
         run: |
-          pwd
-          ls -l # List files to ensure we are in the correct directory
-          ./mvnw clean package -DskipTests
+         ./mvnw clean package -DskipTests
 
       # Build Docker image for producer app
       - name: Build Docker image for producer app
