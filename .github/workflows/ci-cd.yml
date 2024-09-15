@@ -20,6 +20,12 @@ jobs:
           pwd
           ls -R # Recursively list all directories and files
 
+      # Set execute permission for mvnw
+      - name: Set execute permission for mvnw
+        run: |
+          chmod +x ./consumer/mvnw
+          chmod +x ./producer/mvnw
+
       # Set up JDK 17
       - name: Set up JDK
         uses: actions/setup-java@v3
@@ -29,15 +35,6 @@ jobs:
 
       # Install Maven
       - name: Install Maven
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-      - name: Install Maven
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
         run: |
           wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip
           unzip apache-maven-3.8.6-bin.zip
