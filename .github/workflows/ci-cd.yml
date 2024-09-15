@@ -68,3 +68,25 @@ jobs:
           docker build -t ghcr.io/pravesh-77/producer-app:latest ./producer
           echo "${{ secrets.KAFKA_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           docker push ghcr.io/pravesh-77/producer-app:latest
+
+      # Set up Helm
+      - name: Set up Helm
+        run: |
+          curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+      # Deploy to Kubernetes using Helm
+      - name: Deploy consumer app to Kubernetes
+        run: |
+          helm upgrade --install consumer-app ./helm/consumer-chart --namespace my-namespace --create-namespace
+
+      - name: Deploy producer app to Kubernetes
+        run: |
+          helm upgrade --install producer-app ./helm/producer-chart --namespace my-namespace --create-namespace
+
+      - name: Deploy Kafka to Kubernetes
+        run: |
+          helm upgrade --install kafka ./helm/kafka-chart --namespace my-namespace --create-namespace
+
+      - name: Deploy Zookeeper to Kubernetes
+        run: |
+          helm upgrade --install zookeeper ./helm/zookeeper-chart --namespace my-namespace --create-namespace
