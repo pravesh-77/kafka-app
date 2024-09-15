@@ -52,9 +52,9 @@ jobs:
       # Build Docker image for consumer app
       - name: Build Docker image for consumer app
         run: |
-          docker build -t ghcr.io/pravesh-77/consumer-app:latest ./consumer
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
-          docker push ghcr.io/pravesh-77/consumer-app:latest
+          docker build -t docker.io/pravesh77/consumer-app:latest ./consumer
+          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+          docker push docker.io/pravesh77/consumer-app:latest
 
       # Build and package producer app
       - name: Build and package producer app
@@ -65,9 +65,9 @@ jobs:
       # Build Docker image for producer app
       - name: Build Docker image for producer app
         run: |
-          docker build -t ghcr.io/pravesh-77/producer-app:latest ./producer
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
-          docker push ghcr.io/pravesh-77/producer-app:latest
+          docker build -t docker.io/pravesh77/producer-app:latest ./producer
+          echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login docker.io -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+          docker push docker.io/pravesh77/producer-app:latest
 
       # Set up Helm
       - name: Set up Helm
